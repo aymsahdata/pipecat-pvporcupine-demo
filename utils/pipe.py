@@ -49,7 +49,7 @@ async def call_pipecat(user_id: str):
 
         tma_in = LLMUserResponseAggregator()
         tma_out = LLMAssistantResponseAggregator()
-        pico_wake_word = CustomWakeCheckFilter(20, user_id)
+        pico_wake_word = CustomWakeCheckFilter(20, user_id, keyword_path_mac="keyword_files/hey_pipe_mac.ppn")
 
 
         pipeline = Pipeline(
