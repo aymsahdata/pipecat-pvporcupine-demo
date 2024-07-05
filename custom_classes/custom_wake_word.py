@@ -83,7 +83,11 @@ class CustomWakeCheckFilter(FrameProcessor):
             self.wake_timer = 0.0
             self.accumulator = bytearray() # initialize as empty byte array to accumulate audio insteaad of text
 
-    def __init__(self, keepalive_timeout: float = 3, user_id: str = None):
+    def __init__(self, keepalive_timeout: float = 3,
+                 user_id: str = None,
+                 keyword_path_windows: str = None,
+                 keyword_path_linux: str = None,
+                 keyword_path_mac: str = None):
         
         # Wake phrases are not used in this filter, instead we use the Porcupine wake word detection engine
         # so we pass an empty list to the super class
@@ -95,9 +99,9 @@ class CustomWakeCheckFilter(FrameProcessor):
         
         # Initialize the Porcupine handler as a class attribute (atleast one keyword file is required)
         self.pico_handler = CustomWakeCheckFilter.PicoHandle(os.getenv("PICOVOICE_API_KEY"),
-                                                       # "PATH/TO/WINDOWS/KEYWORD/FILE.ppn",
-                                                       # "PATH/TO/LINUX/KEYWORD/FILE.ppn",
-                                                       keyword_path_mac="keyword_files/hey_pipe_mac.ppn").create_handler()
+                                                                keyword_path_windows,
+                                                                keyword_path_linux,
+                                                                keyword_path_mac).create_handler()
                                                        
                                                        
         
