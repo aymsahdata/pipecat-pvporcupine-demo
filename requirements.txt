@@ -1,0 +1,6 @@
+pipecat-ai
+pipecat-ai[websocket, deepgram, openai, silero]
+pvporcupine
+langchain
+langchain-core
+langchain-community
