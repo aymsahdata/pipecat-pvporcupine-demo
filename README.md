@@ -9,3 +9,8 @@
   `pico_wake_word = CustomWakeCheckFilter(20, user_id, keyword_path_mac="keyword_files/hey_pipe_mac.ppn")`
 
 - Run `main.py` and navigate to `http://localhost:8000` to test
+
+
+### Things to Note
+- Main changes are commented in the `custom_classes/` directory
+- A UserId has to be passed to the main pipeline (called from `main.py`) due to AudioRawFrame not having userId as an attribute
