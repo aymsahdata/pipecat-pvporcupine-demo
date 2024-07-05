@@ -10,7 +10,7 @@ async def process_questions_async(question: str | AddableDict | dict, userId: st
             
             if quest:
                 # Add any steps to process the user input inlcuding history here
-                data = f"Got Input: {quest}\nUser ID: {userId}"
+                data = f"\nGot Input: {quest}\nUser ID: {userId}"
                 logger.debug(data)
                 return data
             logger.debug("No user input found.")
