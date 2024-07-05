@@ -14,3 +14,4 @@
 ### Things to Note
 - Main changes are commented in the `custom_classes/` directory
 - A UserId has to be passed to the main pipeline (called from `main.py`) due to AudioRawFrame not having userId as an attribute
+- The server and protobuff config being run is provided from Pipecat example for WebSockets 
