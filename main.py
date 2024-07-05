@@ -1,5 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
-from pipe import call_pipecat
+from utils.pipe import call_pipecat
 from __init__ import asyncio, os
 import subprocess
 

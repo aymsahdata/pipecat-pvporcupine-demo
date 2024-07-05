@@ -1,6 +1,6 @@
 
 from __init__ import *
-from functions import process_questions_async, process_questions
+from utils.functions import process_questions_async, process_questions
 
 
 logger.remove(0)
