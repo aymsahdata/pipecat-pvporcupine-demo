@@ -2,3 +2,5 @@
 *.pyc
 __pycache__/
 pipecatdemo/
+*/.DS_Store
+.DS_Store
